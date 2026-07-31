@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About _ Iman Qasimi</title>
+<meta name="description" content="About Iman Qasimi: biography, education, skills, and interests.">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- Internal CSS: page-specific layout for the about page -->
+<style>
+  .about-hero { padding: 3rem 0 1rem; }
+  .skill-bar-track {
+    background: var(--bg-elev-2);
+    border-radius: 999px;
+    height: 8px;
+    overflow: hidden;
+    margin-top: 0.4rem;
+  }
+  .skill-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-3), var(--accent-2));
+    border-radius: 999px;
+  }
+  .skill-row { margin-bottom: 1rem; }
+  .skill-row .skill-label {
+    display: flex; justify-content: space-between;
+    font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-dim);
+  }
+  .timeline-item { border-left: 2px solid var(--border); padding-left: 1.25rem; margin-bottom: 1.75rem; position: relative; }
+  .timeline-item::before {
+    content: ""; position: absolute; left: -7px; top: 4px;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--accent); border: 2px solid var(--bg);
+  }
+  .timeline-date { font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-3); }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="editor-titlebar">
+    <span class="dots"><span></span><span></span><span></span></span>
+    <span>Iman Qasimi — portfolio — about.html</span>
+  </div>
+  <nav class="navbar" aria-label="Primary">
+    <a href="index.html" class="brand">Iman<span class="cursor"></span>.dev</a>
+    <ul class="nav-tabs">
+      <li><a href="index.html"><span class="tab-dot"></span><span class="label">index.html</span></a></li>
+      <li><a href="about.html" aria-current="page"><span class="tab-dot"></span><span class="label">about.html</span></a></li>
+      <li><a href="resume.html"><span class="tab-dot"></span><span class="label">resume.html</span></a></li>
+      <li><a href="projects.html"><span class="tab-dot"></span><span class="label">projects.html</span></a></li>
+      <li><a href="blog.html"><span class="tab-dot"></span><span class="label">blog.html</span></a></li>
+      <li><a href="contact.html"><span class="tab-dot"></span><span class="label">contact.html</span></a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="about-hero">
+    <div class="wrap">
+      <p class="eyebrow">about me</p>
+      <h1>The person behind the code</h1>
+      <p style="max-width: 60ch; margin-top: 1rem;">
+        I'm an Information Technology student with a growing focus on cybersecurity.
+         My interest started with wanting to understand how systems actually get broken into, 
+         not just how to build them and it's turned into a genuine curiosity about how networks,
+          systems, and applications can be secured against real threats.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap two-col">
+      <div>
+        <h2>Biography</h2>
+        <p style="margin-bottom: 1rem;">
+          Right now I'm building a foundation by studying for the CompTIA Security+ certification,
+           and outside of coursework I like exploring CTF challenges. 
+        </p>
+        <p>
+          I'm especially interested in network security.
+          This site itself is part of that learning process a chance to practice the web fundamentals that underpin a lot of security work.
+        </p>
+
+        <h2 style="margin-top: 2.5rem;">Education</h2>
+        <div class="timeline-item">
+          <p class="timeline-date">2023 — Expected 2027</p>
+          <h3>B.A., Spec. Hons. Information Technology</h3>
+          <p>York University University.</p>
+        </div>
+        <div class="timeline-item">
+          <p class="timeline-date">Sep 2019 – Sep 2021</p>
+          <h3>Bachelor of Computer Science</h3>
+          <p> </p>
+        </div>
+      </div>
+
+      <div>
+        <h2>Skills</h2>
+        <div class="skill-row">
+          <div class="skill-label"><span>HTML / CSS</span><span>90%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label"><span>JavaScript</span><span>80%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label"><span>React</span><span>70%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 70%;"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label"><span>Python / Node.js</span><span>65%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 65%;"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label"><span>SQL &amp; Databases</span><span>60%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 60%;"></div></div>
+        </div>
+
+        <h2 style="margin-top: 2.5rem;">Tools I reach for</h2>
+        <ul class="list-check">
+          <li>Git &amp; GitHub for version control</li>
+          <li>VS Code as my daily editor</li>
+          <li>Figma for quick mockups</li>
+          <li>MATLAB for data analysis and numerical computing</li>
+        </ul>
+
+        <h2 style="margin-top: 2.5rem;">Interests</h2>
+        <ol class="list-plain">
+          <li>1. Studying for the CompTIA Security+ exam</li>
+          <li>2. Working through beginner CTF challenges</li>
+          <li>3. Reading crime thriller (currently Reading Behind Closed Doors)</li>
+          <li>4. Painting (Brushing through colors is my therapy)</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p class="prompt"><span class="path">~/Iman-Qasimi</span> <span class="sign">$</span> echo "&copy; 2026 Iman Qasimi. All rights reserved."</p>
+    <ul class="social-links">
+      <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GH</a></li>
+      <li><a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">IN</a></li>
+      <li><a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
