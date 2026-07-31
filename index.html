@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iman Qasimi — IT Student | Cybersecurity</title>
+<meta name="description" content="Personal portfolio and blog of Iman Qasimi, IT Student | Cybersecurity.">
+
+<!-- External stylesheet: shared design system for the whole site -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- Internal CSS: overrides / additions specific to the home page only -->
+<style>
+  
+  .hero { padding-top: 3.5rem; position: relative; overflow: hidden; }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 360px; height: 360px;
+    background: radial-gradient(circle, rgba(240,163,92,0.18), transparent 70%);
+    pointer-events: none;
+  }
+  .intro-row { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1.5rem; }
+  .highlight-icon {
+    width: 44px; height: 44px; border-radius: var(--radius);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-mono); font-weight: 700; font-size: 1.1rem;
+    background: var(--bg-elev-2); color: var(--accent-3); margin-bottom: 0.9rem;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="editor-titlebar">
+    <span class="dots"><span></span><span></span><span></span></span>
+    <span>Iman Qasimi — portfolio — index.html</span>
+  </div>
+  <nav class="navbar" aria-label="Primary">
+    <a href="index.html" class="brand">Iman<span class="cursor"></span>.dev</a>
+    <ul class="nav-tabs">
+      <li><a href="index.html" aria-current="page"><span class="tab-dot"></span><span class="label">index.html</span></a></li>
+      <li><a href="about.html"><span class="tab-dot"></span><span class="label">about.html</span></a></li>
+      <li><a href="resume.html"><span class="tab-dot"></span><span class="label">resume.html</span></a></li>
+      <li><a href="projects.html"><span class="tab-dot"></span><span class="label">projects.html</span></a></li>
+      <li><a href="blog.html"><span class="tab-dot"></span><span class="label">blog.html</span></a></li>
+      <li><a href="contact.html"><span class="tab-dot"></span><span class="label">contact.html</span></a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="intro-row">
+           <img class="avatar" src="assets/Iman Qasimi.jpg" alt="Iman Qasimi">
+          <div>
+            <p class="eyebrow">welcome</p>
+            <!-- Inline CSS example -->
+            <p style="color: var(--text); font-family: var(--font-mono); font-size: 0.85rem;">Hi, I'm glad you're here.</p>
+          </div>
+        </div>
+        <h1>Learning how systems break so I can help secure them.</h1>
+        <p style="margin-top: 1rem; max-width: 42ch;">
+         I'm Iman Qasimi, a Specialized Honours Information Technology student at York University,
+          working toward CompTIA Security+. I currently work IT support at York University Libraries,
+           and I like building things and figuring out how they work.
+        </p>
+        <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="projects.html" class="btn btn-primary">View Projects →</a>
+          <a href="contact.html" class="btn btn-ghost">Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="terminal">
+        <div class="terminal-bar">
+          <span class="dots"><span></span><span></span><span></span></span>
+          <span>about-me.js</span>
+        </div>
+        <div class="terminal-body">
+          <div><span class="ln">1</span><span class="tok-key">const</span> developer <span class="tok-punc">=</span> {</div>
+          <div><span class="ln">2</span>&nbsp;&nbsp;name: <span class="tok-str">"Iman Qasimi"</span>,</div>
+          <div><span class="ln">3</span>&nbsp;&nbsp;role: <span class="tok-str">"IT Student & Support Assistant"</span>,</div>
+          <div><span class="ln">4</span>&nbsp;&nbsp;stack: [<span class="tok-str">"Python"</span>, <span class="tok-str">"SQL"</span>, <span class="tok-str">"Java"</span>, <span class="tok-str">"HTML/CSS"</span>],</div>
+          <div><span class="ln">5</span>&nbsp;&nbsp;<span class="tok-fn">basedIn</span>: <span class="tok-str">"Toronto, ON"</span>,</div>
+          <div><span class="ln">6</span>&nbsp;&nbsp;<span class="tok-com">// York University — B.A. Spec. Hons. IT, 2027</span></div>
+          <div><span class="ln">7</span>&nbsp;&nbsp;currentlyLearning: <span class="tok-str">"CompTIA Security+"</span>,</div>
+          <div><span class="ln">8</span>};</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap">
+      <p class="eyebrow">what I do</p>
+      <h2>A quick tour of my toolbox</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="highlight-icon">01</div>
+          <h3>Web & Systems</h3>
+          <p> Building with HTML/CSS and managing content through WordPress, with a growing focus on system administration and applied networking.</p>
+        </div>
+        <div class="card">
+          <div class="highlight-icon">02</div>
+          <h3>IT Support & Security</h3>
+          <p>Hands-on troubleshooting, hardware/software support, and networking fundamentals, currently studying for CompTIA Security+ to go deeper into security.</p>
+        </div>
+        <div class="card">
+          <div class="highlight-icon">03</div>
+          <h3>Data & Analytics</h3>
+          <p>Comfortable with Python, SQL, and Excel/Google Sheets for data cleaning, analysis, and reporting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap" style="text-align: center;">
+      <h2>Want to see what I've built?</h2>
+      <p style="max-width: 50ch; margin: 0 auto 1.5rem;">A couple of projects, from course work to team builds, are on the projects page, along with links to the code.</p>
+      <a href="projects.html" class="btn btn-primary">Browse Projects</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p class="prompt"><span class="path">~/Iman-Qasimi</span> <span class="sign">$</span> echo "&copy; 2026 Iman Qasimi. All rights reserved."</p>
+    <ul class="social-links">
+      <li>
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <line x1="8" y1="11" x2="8" y2="16"/>
+            <line x1="8" y1="8" x2="8" y2="8"/>
+            <path d="M12 16v-3.2c0-1.5 1-2.3 2.3-2.3S16.5 11.3 16.5 12.8V16"/>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
