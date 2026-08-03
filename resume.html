@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume — Iman Qasimi</title>
+<meta name="description" content="Download or view Jordan Ellis's resume.">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- Internal CSS -->
+<style>
+  .resume-hero { padding: 3rem 0 1.5rem; text-align: center; }
+  .resume-frame-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--bg-elev);
+  }
+  .resume-frame-bar {
+    display: flex; align-items: center; gap: 0.5rem;
+    padding: 0.6rem 0.9rem;
+    background: var(--bg-elev-2);
+    border-bottom: 1px solid var(--border);
+    font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);
+  }
+  .resume-frame { width: 100%; height: 800px; border: none; display: block; background: #fff; }
+  .resume-actions { display: flex; justify-content: center; gap: 1rem; margin: 1.5rem 0 3rem; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="editor-titlebar">
+    <span class="dots"><span></span><span></span><span></span></span>
+    <span>Iman Qasimi — portfolio — resume.html</span>
+  </div>
+  <nav class="navbar" aria-label="Primary">
+    <a href="index.html" class="brand">Iman<span class="cursor"></span>.dev</a>
+    <ul class="nav-tabs">
+      <li><a href="index.html"><span class="tab-dot"></span><span class="label">index.html</span></a></li>
+      <li><a href="about.html"><span class="tab-dot"></span><span class="label">about.html</span></a></li>
+      <li><a href="resume.html" aria-current="page"><span class="tab-dot"></span><span class="label">resume.html</span></a></li>
+      <li><a href="projects.html"><span class="tab-dot"></span><span class="label">projects.html</span></a></li>
+      <li><a href="blog.html"><span class="tab-dot"></span><span class="label">blog.html</span></a></li>
+      <li><a href="contact.html"><span class="tab-dot"></span><span class="label">contact.html</span></a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="resume-hero">
+    <div class="wrap">
+      <p class="eyebrow">resume</p>
+      <h1>My Resume</h1>
+      <p style="max-width: 50ch; margin: 1rem auto 0;">
+        A quick look at my education, skills, and experience. Prefer a PDF?
+        Grab a copy with the button below.
+      </p>
+    </div>
+  </section>
+
+
+  <div class="resume-frame-wrap">
+    <div class="resume-frame-bar">
+      <span class="dots"><span></span><span></span><span></span></span>
+      <span>resume.pdf</span>
+    </div>
+    <iframe
+      class="resume-frame"
+      src="assets/resume.pdf"
+      title="Iman Qasimi resume preview">
+      Your browser doesn't support embedded PDFs.
+      <a href="assets/Resume.pdf">Download the resume instead</a>.
+    </iframe>
+  </div>
+
+  <div class="resume-actions">
+    <a href="assets/resume.pdf" download class="btn btn-primary">⬇ Download Resume (PDF)</a>
+    <a href="contact.html" class="btn btn-ghost">Get in Touch</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p class="prompt"><span class="path">~/Iman-Qasimi</span> <span class="sign">$</span> echo "&copy; 2026 Iman Qasimi. All rights reserved."</p>
+    <ul class="social-links">
+      <li>
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <line x1="8" y1="11" x2="8" y2="16"/>
+            <line x1="8" y1="8" x2="8" y2="8"/>
+            <path d="M12 16v-3.2c0-1.5 1-2.3 2.3-2.3S16.5 11.3 16.5 12.8V16"/>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
