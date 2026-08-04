@@ -1,1 +1,34 @@
-
+[
+  {
+    "id": 1,
+    "title": "Adding a Light/Dark Theme Switcher (and a Small Security Lesson About localStorage)",
+    "date": "2026-07-10",
+    "category": "Build Log",
+    "summary": "How I built a persistent theme toggle with localStorage, and why I'd never trust it with anything sensitive.",
+    "content": "The theme switcher was my first real hands-on use of localStorage. The idea is simple: when someone clicks the toggle, I save their choice ('light' or 'dark') to localStorage, and on every page load I read that value back before the page even finishes rendering, so there's no flash of the wrong theme. The trickiest part wasn't the toggle logic itself, it was timing. If I only set the theme after the page loaded, you'd see a flicker of the default theme first. The fix was adding a tiny inline script at the very top of <head>, before the stylesheet even loads, that reads localStorage and sets the theme attribute immediately. One thing this project made click for me, from a security angle: localStorage is not private or encrypted. Anything stored there is plain text, readable by any JavaScript running on the page, which means it's also exposed to XSS attacks if a site has that vulnerability. That's fine for something low-stakes like a theme preference, but it's a good reminder never to store things like tokens, passwords, or personal data client-side without real protection. Small feature, but it was a good first look at client-side storage and its limits."
+  },
+  {
+    "id": 2,
+    "title": "Loading Blog Posts from JSON Instead of Hardcoding Them",
+    "date": "2026-07-17",
+    "category": "Build Log",
+    "summary": "Rebuilding this blog page to fetch and render posts dynamically from a JSON file.",
+    "content": "Before this, every post on this page was hand-typed HTML. That works fine for one post, but it doesn't scale, and it means content and layout are tangled together. Now, all my posts live in data/posts.json as an array of objects (title, date, category, summary, content), and js/blog.js fetches that file and builds each post card in JavaScript. The part I had to think through was sorting: I wanted the newest post to show up first, so I sort the array by date before rendering rather than trusting the order posts happen to be listed in the file. I also formatted the raw date string ('2026-07-17') into something more readable using JavaScript's Date object, and added a small 'Latest' badge next to whichever post ends up first after sorting. One security-adjacent thing I paid attention to here: since this content is coming from an external file and getting inserted into the page, I was careful about how it gets inserted. Using innerHTML carelessly with untrusted data is a classic way sites end up vulnerable to script injection. My posts.json is content I control, so the risk here is low, but it's the kind of habit worth building early, since the same pattern shows up in real apps pulling data from actual user input or external APIs."
+  },
+  {
+    "id": 3,
+    "title": "Contact Form Validation: Why Client-Side Checks Aren't a Security Feature",
+    "date": "2026-07-24",
+    "category": "Build Log",
+    "summary": "Adding inline validation to my contact form, and why that's a UX improvement, not a security boundary.",
+    "content": "This part had me intercept the form's submit event, check the name, email, and message fields, and show inline error messages instead of letting the browser's default validation handle it. Getting the regex right for email format took some trial and error, and I made sure errors clear automatically as soon as someone starts fixing the field, instead of sitting there after they've already corrected it. The thing I kept coming back to while building this: none of this is a security control. Anyone can open dev tools, disable JavaScript, or send a request straight to a server bypassing the form entirely. Client-side validation exists purely to give people fast, friendly feedback before they submit, catching typos and empty fields, so they don't have to wait on a round trip to the server to find out something's wrong. Actual protection against bad or malicious input has to happen server-side, since the client can never be trusted. This site doesn't have a real backend, so this form is really a demonstration of the pattern, but it's a distinction that matters a lot once you're working with forms that touch a real database."
+  },
+  {
+    "id": 4,
+    "title": "Building a Live Filter for Projects and Posts",
+    "date": "2026-07-31",
+    "category": "Build Log",
+    "summary": "Adding instant search filtering across the Projects and Blog pages without any page reloads.",
+    "content": "The last piece was a live filter for both my projects grid and this blog page, so visitors can search without waiting on a reload. The approach is straightforward: on every keystroke in the search box, loop through each card, check whether the query matches the title or category/description, and toggle its visibility with card.style.display. If nothing matches, a 'no results' message appears instead of just leaving an empty, confusing page. The part that actually took some thought was timing on this page specifically: since posts are rendered dynamically from posts.json (see the previous post), the filter setup has to run after the posts actually exist in the DOM, not before. Running it too early means the filter is listening for cards that don't exist yet. I handled that by triggering the filter setup from inside the callback that runs once blog.js finishes rendering posts, rather than assuming everything's ready as soon as the page loads. Small detail, but it's the kind of ordering bug that's easy to miss until you actually test it."
+  }
+]
