@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         postElement.classList.add("card", "post-card");
 
         const readableDate = formatDate(post.date);
-        const isLatest = index === 0; // posts are already sorted, so index 0 is newest
+        const isLatest = index === 0; 
 
         postElement.innerHTML = `
           <p class="post-meta">
@@ -56,8 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       });
 
-      // The filter script (Part 5) needs the posts to exist in the DOM
-      // before it can wire up filtering, so let it know rendering is done.
       document.dispatchEvent(new CustomEvent("postsRendered"));
     })
     .catch(error => console.error("Error loading posts:", error));
