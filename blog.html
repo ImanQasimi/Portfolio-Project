@@ -34,15 +34,19 @@
   .post-card { margin-bottom: 1.5rem; }
   .post-meta { font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.5rem; }
   .post-meta .category { color: var(--accent-3); }
-  .placeholder-note {
-    border: 1px dashed var(--border);
-    border-radius: var(--radius);
-    padding: 1.25rem 1.5rem;
-    color: var(--text-muted);
+  .post-summary, .post-full-content { margin-bottom: 0.75rem; }
+  .read-more-btn {
     font-family: var(--font-mono);
-    font-size: 0.85rem;
-    background: var(--bg-elev);
+    font-size: 0.78rem;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--accent-3);
+    padding: 0.4rem 0.9rem;
+    cursor: pointer;
   }
+  .read-more-btn:hover { border-color: var(--accent-3); background: var(--bg-elev-2); }
+  
 </style>
 </head>
 <body>
@@ -86,9 +90,6 @@
         No posts match your search.
       </p>
 
-      <p class="placeholder-note" style="margin-top: 2rem;">
-        // something
-      </p>
     </div>
   </section>
 </main>
