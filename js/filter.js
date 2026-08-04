@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     if (noResults) {
-      noResults.style.display = visibleCount === 0 ? "" : "none";
+      noResults.style.display = visibleCount === 0 ? "block" : "none";
     }
   });
 });
