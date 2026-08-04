@@ -29,6 +29,33 @@
   --max-width: 1080px;
 }
 
+/* Light theme override dark (above) is the default/fallback palette.
+   Toggled via js/theme.js, which sets data-theme="light" on <html>/<body>. */
+[data-theme="light"] {
+  --bg: #f6f7fb;
+  --bg-elev: #ffffff;
+  --bg-elev-2: #eceef4;
+  --border: #dde1ea;
+
+  --text: #12151c;
+  --text-dim: #444b5c;
+  --text-muted: #767d90;
+}
+
+/* Theme toggle button, lives inside the shared nav (components/header.html) */
+.theme-toggle-btn {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  background: transparent;
+  border: none;
+  border-left: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 0 1.25rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.theme-toggle-btn:hover { color: var(--accent-3); background: var(--bg-elev-2); }
+
 /* Reset */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
