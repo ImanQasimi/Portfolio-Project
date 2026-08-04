@@ -30,8 +30,8 @@
     "category": "Build Log",
     "summary": "Adding instant search filtering across the Projects and Blog pages without any page reloads.",
     "content": "The last piece was a live filter for both my projects grid and this blog page, so visitors can search without waiting on a reload. The approach is straightforward: on every keystroke in the search box, loop through each card, check whether the query matches the title or category/description, and toggle its visibility with card.style.display. If nothing matches, a 'no results' message appears instead of just leaving an empty, confusing page. The part that actually took some thought was timing on this page specifically: since posts are rendered dynamically from posts.json (see the previous post), the filter setup has to run after the posts actually exist in the DOM, not before. Running it too early means the filter is listening for cards that don't exist yet. I handled that by triggering the filter setup from inside the callback that runs once blog.js finishes rendering posts, rather than assuming everything's ready as soon as the page loads. Small detail, but it's the kind of ordering bug that's easy to miss until you actually test it."
-  }
-    {
+  },
+  {
     "id": 5,
     "title": "The Bug That Wasn't a Bug: Why My Header and Footer Went Missing",
     "date": "2026-08-03",
