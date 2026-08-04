@@ -1,12 +1,5 @@
 // theme.js
 // Handles light/dark theme toggling and persists the choice in localStorage
-// so the theme survives page reloads and navigation between pages.
-//
-// Note: because the toggle button now lives inside components/header.html
-// (loaded dynamically by components.js), this button doesn't exist yet when
-// the page first loads. So instead of wiring everything up automatically on
-// DOMContentLoaded, this file exposes initThemeToggle() globally, and
-// components.js calls it once the header has actually been injected.
 
 function initThemeToggle() {
   const toggleBtn = document.getElementById("theme-toggle");
@@ -40,7 +33,6 @@ function initThemeToggle() {
 window.initThemeToggle = initThemeToggle;
 
 // Fallback: if a page ever has the toggle button already in its HTML
-// (no dynamic header), initialize immediately on load.
 document.addEventListener("DOMContentLoaded", function () {
   if (document.getElementById("theme-toggle")) {
     initThemeToggle();
